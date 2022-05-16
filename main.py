@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import alarm
 import get_TH
 import disp

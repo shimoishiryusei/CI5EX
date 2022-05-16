@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from get_time import Year
 from grove_rgb_lcd import *
 
