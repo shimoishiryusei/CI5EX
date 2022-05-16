@@ -1,5 +1,3 @@
-from cmath import isnan
-from tkinter.tix import Tree
 import grovepi
 import math
 
