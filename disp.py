@@ -1,7 +1,7 @@
 from grove_rgb_lcd import *
 
 def set_disp(times):
-    setText("{}年{}月{}日{}時{}分{}秒".format(time[0], time[1], time[2], time[3], time[4], time[5]))
+    setText("{}年{}月{}日{}時{}分{}秒".format(times[0], times[1], times[2], times[3], times[4], times[5]))
     setRGB(0,128,64)
 
     for c in range(0,255):
