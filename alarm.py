@@ -1,6 +1,8 @@
 import time
 import grovepi
 
+buzzer = 8
+
 grovepi.pinMode(buzzer, "OUTPUT")
 
 while True:
