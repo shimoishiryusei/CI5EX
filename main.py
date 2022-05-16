@@ -12,4 +12,3 @@ import time
 while True:
     items = get_time.get_time()
     disp.set_disp(items)
-    time.sleep(1)
