@@ -1,1 +1,3 @@
-import alarm.py
+import alarm
+
+alarm.main_alarm()
