@@ -2,11 +2,11 @@ import time
 import grovepi
 
 buzzer = 8
-count_B = 0
 
 grovepi.pinMode(buzzer, "OUTPUT")
 
 def main_alarm(B):
+    count_B = 0
     while True:
         try:
             if B == 0 & count_B == 0:
