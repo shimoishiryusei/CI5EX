@@ -10,5 +10,7 @@ import time
 #get_TH.get_TH()
 
 while True:
-    items = get_time.get_time()
-    disp.set_disp(items)
+    times = get_time.get_time()
+    THs = get_TH.get_TH()
+
+    disp.set_disp(times, THs)

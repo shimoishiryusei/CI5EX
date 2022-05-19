@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from os import lseek
 from grove_rgb_lcd import *
 import time
 def set_disp(times, THs):
