@@ -10,7 +10,7 @@ import button
 #alarm.main_alarm()
 #get_TH.get_TH()
 count_B = 0
-H = 15
+H = 16
 #M = 40
 
 while True:
