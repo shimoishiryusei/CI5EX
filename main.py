@@ -9,7 +9,6 @@ import button
 
 #alarm.main_alarm()
 #get_TH.get_TH()
-count_B = 0
 H = 16
 #M = 40
 
@@ -21,10 +20,8 @@ while True:
     disp.set_disp(times, THs)
     if times[3] == H :
         print("Test")
-        if count_B == 0:
-            alarm.main_alarm(B)
-            count_B += 1
-            print(count_B)
+        alarm.main_alarm(B)
+ 
 
 
 
