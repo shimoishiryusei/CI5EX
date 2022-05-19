@@ -2,6 +2,7 @@ import time
 import grovepi
 
 buzzer = 8
+COUNT_UP = 1
 
 grovepi.pinMode(buzzer, "OUTPUT")
 
@@ -16,7 +17,7 @@ def main_alarm(B):
             elif B == 1:
                 grovepi.digitalWrite(buzzer,0)
                 print("stop")
-                return 1
+                return COUNT_UP
                 break
                 
         except KeyboardInterrupt:
