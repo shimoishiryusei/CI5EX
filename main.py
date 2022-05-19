@@ -21,7 +21,8 @@ while True:
     disp.set_disp(times, THs)
     if times[3] == H :
         if count_B == 0:
-            count_B += alarm.main_alarm(B)
+            alarm.main_alarm(B)
+            count_B += 1
 
 
 
