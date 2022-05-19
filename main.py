@@ -19,8 +19,8 @@ while True:
     B = button.get_button()
 
     disp.set_disp(times, THs)
-    print("Test")
     if times[3] == H & times[4] == M:
         alarm.main_alarm(B)
+        print("Test")
 
 
