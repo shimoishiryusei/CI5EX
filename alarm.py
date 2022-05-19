@@ -16,6 +16,7 @@ def main_alarm(B):
             elif B == 1:
                 grovepi.digitalWrite(buzzer,0)
                 print("stop")
+                return 1
                 break
                 
         except KeyboardInterrupt:
