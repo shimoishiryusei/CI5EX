@@ -10,12 +10,17 @@ import button
 #alarm.main_alarm()
 #get_TH.get_TH()
 
+H = 14
+M = 40
+
 while True:
     times = get_time.get_time()
     THs = get_TH.get_TH()
     B = button.get_button()
 
     disp.set_disp(times, THs)
-    print(B)
+
+    if times[3] == H & times[4] == M:
+        alarm.main_alarm(B)
 
 
