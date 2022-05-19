@@ -4,6 +4,7 @@ import get_TH
 import disp
 import get_time
 import time
+import button
 
 
 #alarm.main_alarm()
@@ -12,5 +13,9 @@ import time
 while True:
     times = get_time.get_time()
     THs = get_TH.get_TH()
+    B = button.get_button()
 
     disp.set_disp(times, THs)
+    print(B)
+
+
