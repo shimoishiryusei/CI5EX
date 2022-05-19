@@ -9,4 +9,4 @@ def set_disp(times, THs):
     Time_strings = str(Month)+"/"+str(Day)+" "+str(Hour)+":"+str(Minute)+":"+str(Second) + "\n" + "T:" + str(Tmp) + " " + "H:" + str(Hmd)
     setText(Time_strings)
     setRGB(0,128,64)
-    time.sleep(1)
+    time.sleep(0.5)
