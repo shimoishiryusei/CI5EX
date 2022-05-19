@@ -11,7 +11,8 @@ def get_TH():
         try:
             [temp,humidity] = grovepi.dht(sensor, blue)
             if math.isnan(temp) == False and math.isnan(humidity) == False:
-                print("temp = %.02f c humidity = %.02f%%"%(temp, humidity))
+                #print("temp = %.02f c humidity = %.02f%%"%(temp, humidity))
+                return temp, humidity
         
         except IOError:
             print("Error")
