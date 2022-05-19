@@ -5,16 +5,19 @@ buzzer = 8
 
 grovepi.pinMode(buzzer, "OUTPUT")
 
-def main_alarm():
+def main_alarm(B):
     while True:
         try:
-            grovepi.digitalWrite(buzzer,1)
-            print("start")
-            time.sleep(1)
+            if B == 0:
+                grovepi.digitalWrite(buzzer,1)
+                print("start")
+                break
 
-            grovepi.digitalWrite(buzzer,0)
-            print("stop")
-            time.sleep(1)
+            elif B == 1:
+                grovepi.digitalWrite(buzzer,0)
+                print("stop")
+                break
+                
         except KeyboardInterrupt:
             grovepi.digitalWrite(buzzer,0)
             break
