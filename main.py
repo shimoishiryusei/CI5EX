@@ -23,7 +23,7 @@ M = input("Minute:")
 # move
 while True:
     print("chack =" + str(chack))
-    print("minute =" + M)
+    print("minute =" + str(M))
     times = get_time.get_time()
     THs = get_TH.get_TH(sensor)
     B = button.get_button(button_num)
