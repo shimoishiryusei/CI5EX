@@ -7,6 +7,7 @@ count_B = 0
 grovepi.pinMode(buzzer, "OUTPUT")
 
 def main_alarm(B):
+    global count_B
     while True:
         try:
             if B == 0 & count_B == 0:
