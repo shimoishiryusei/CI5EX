@@ -9,7 +9,7 @@ import button
 
 #alarm.main_alarm()
 #get_TH.get_TH()
-H = 16
+H = 13
 #M = 40
 
 while True:
