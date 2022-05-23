@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # imports
-from tabnanny import check
 import alarm
 import get_TH
 import disp
