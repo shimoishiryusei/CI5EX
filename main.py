@@ -31,7 +31,7 @@ while True:
         chack += alarm.main_alarm(buzzer, B, count_Button)
         if chack >= 1:
             count_Button += 1
-            Notify.main()
+            Notify.send_line_notify()
 
 
  
