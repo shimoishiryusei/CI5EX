@@ -3,6 +3,7 @@ import requests
 
 def main():
     send_line_notify('てすとてすと')
+    print("send")
 
 def send_line_notify(notification_message):
     """
