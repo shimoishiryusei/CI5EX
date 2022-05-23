@@ -28,6 +28,7 @@ while True:
         chack += alarm.main_alarm(buzzer, B, count_Button)
         if chack == 1:
             count_Button += 1
+        print(chack)
         
  
 
