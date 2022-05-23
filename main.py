@@ -14,12 +14,6 @@ sensor = 4
 count_Button = 0
 chack = 0
 
-
-
-
-
-#alarm.main_alarm()
-#get_TH.get_TH()
 H = 13
 #M = 40
 
