@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # imports
+from tabnanny import check
 import alarm
 import get_TH
 import disp
@@ -24,10 +25,10 @@ while True:
 
     disp.set_disp(times, THs)
     if times[3] == H :
-        print("Test")
         chack += alarm.main_alarm(buzzer, B, count_Button)
         if chack == 1:
             count_Button += 1
+        
  
 
 
