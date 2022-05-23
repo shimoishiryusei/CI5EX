@@ -15,7 +15,7 @@ sensor = 4
 count_Button = 0
 chack = 0
 
-H = 13
+H = 14
 #M = 40
 
 while True:
