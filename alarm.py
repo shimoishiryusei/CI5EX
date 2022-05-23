@@ -12,8 +12,7 @@ def main_alarm(buzzer, B, count_B):
                 return Buzzzer_on
                 break
 
-            elif B == 1:
-                count_B += 1
+            elif B == 1 | count_B >= 1:
                 grovepi.digitalWrite(buzzer,0)
                 return Buzzzer_off
                 break
