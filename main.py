@@ -6,6 +6,7 @@ import get_TH
 import disp
 import get_time
 import time
+import Notify
 import button
 
 # define
@@ -15,21 +16,24 @@ sensor = 4
 count_Button = 0
 chack = 0
 
-H = 14
-#M = 40
+# set timer
+H = int(input())
+M = int(input())
 
+# move
 while True:
     times = get_time.get_time()
     THs = get_TH.get_TH(sensor)
     B = button.get_button(button_num)
 
     disp.set_disp(times, THs)
-    if times[3] == H :
+    if times[3] == H & times[4] == M:
         chack += alarm.main_alarm(buzzer, B, count_Button)
         if chack >= 1:
             count_Button += 1
-        print(count_Button)
-        
+            Notify.main()
+
+
  
 
 
