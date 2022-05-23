@@ -26,9 +26,8 @@ while True:
     disp.set_disp(times, THs)
     if times[3] == H :
         chack += alarm.main_alarm(buzzer, B, count_Button)
-        if chack == 1:
+        if chack >= 1:
             count_Button += 1
-        print(chack)
         
  
 
