@@ -9,7 +9,7 @@ def send_line_notify(notification_message):
     """
     LINEに通知する
     """
-    line_notify_token = 'M4nCabhd0kNDtFexkBH0GpdzuujN3nSIetz0y5ZEzES'
+    line_notify_token = 'NFUMUyzLExwxCHOTXG28GhAQJSbKVKASoVxMpPuysNs'
     line_notify_api = 'https://notify-api.line.me/api/notify'
 
     headers = {
