@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 import datetime
-import urllib.request as req
 import requests
 from bs4 import BeautifulSoup
-import re
 
 def send_line_notify():
     #LINE notifyの設定を行う
