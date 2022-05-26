@@ -14,7 +14,9 @@ buzzer = 8
 button_num = 3
 sensor = 4
 count_Button = 0
-chack = 0
+check = 0
+LINE_flag = 0
+alarm_flag = 0
 
 # set timer
 H = input("Hour:")
@@ -28,13 +30,20 @@ while True:
 
     disp.set_disp(times, THs)
     if times[3] == int(H) and times[4] == int(M):
-        chack += alarm.main_alarm(buzzer, B, count_Button)
-        if chack >= 1:
+        if check >= 1:
             count_Button += 1
-            Notify.send_line_notify()
-            print("send")
-            print("finish the program")
-            break
+            if LINE_flag == 0:
+                Notify.send_line_notify()
+                LINE_flag = 1
+        else:
+            if alarm_flag == 0:
+                check += alarm.main_alarm(buzzer, B, count_Button)
+    else:
+        count_Button = 0
+        check = 0
+        LINE_flag = 0
+        alarm_flag = 0
+
 
 
  
