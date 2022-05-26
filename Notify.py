@@ -1,24 +1,38 @@
 # -*- coding: utf-8 -*-
+import datetime
+import urllib.request as req
 import requests
+from bs4 import BeautifulSoup
+import re
 
 def send_line_notify():
-    message = """
-    これはテストです．
-    """
+    #LINE notifyの設定を行う
+    url = "https://notify-api.line.me/api/notify"
+    access_token = '0LnDbDYEJI5znhYIV8tF5QjUkDqYdIQhj6qLY9fCRPW'
+    headers = {'Authorization': 'Bearer ' + access_token}
 
-    line_notify_token = '0LnDbDYEJI5znhYIV8tF5QjUkDqYdIQhj6qLY9fCRPW'
-    line_notify_api = 'https://notify-api.line.me/api/notify'
+    #天気サイトから欲しい情報を取得する
+    url2 = "https://tenki.jp/forecast/3/17/4610/14100/"   #欲しい情報があるURLを指定
+    res = requests.get(url2)                              #上記URL情報を取得する
+    soup = BeautifulSoup(res.content, 'html.parser')      #取得した情報をhtmlで解析する
 
-    headers = {
-        'Authorization': 'Bearer ' + line_notify_token
-        }
+    # 以下各種情報を取得
+    ddd = soup.find(class_="left-style")                  
 
-    data = {
-        'message': message
-        }
+    telop = soup.find("p", class_="weather-telop").string
 
-    requests.post(
-        line_notify_api, 
-        headers = headers, 
-        data = data,
-        )
+    highlists = soup.find("dd",class_="high-temp temp")
+
+    lowlists = soup.find("dd",class_="low-temp temp")
+
+    ttt = soup.find(class_="rain-probability")
+
+    row=[]
+    for t in ttt:
+        row.append(t)
+
+    # message変数に通知したい文を代入する　改行したい場合は "\n" とダブルクォテーションで囲う
+    message="\n" + ddd.text + "\n" + telop + "\n" + "最高　" + highlists.text + "\n" + "最低　" + lowlists.text + "\n"+ "---------" + "\n" +row[1].text +"\n" + "~6  : " + row[3].text + "\n" + "~12 : " + row[5].text +"\n" + "~18 : " + row[7].text +"\n" + "~24 : " + row[9].text +"\n" +"今日も元気に٩( 'ω' )و "
+
+    payload = {'message': message}
+    r = requests.post(url, headers=headers, params=payload,)
