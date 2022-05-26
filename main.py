@@ -32,6 +32,7 @@ while True:
         if chack >= 1:
             count_Button += 1
             Notify.send_line_notify()
+            print("send")
 
 
  

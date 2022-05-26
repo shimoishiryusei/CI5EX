@@ -6,7 +6,7 @@ def send_line_notify():
     これはテストです．
     """
 
-    line_notify_token = 'DiIYWZVqcwVqLrvbQsQwxAR0G0fSudp4QvntlOrkK1n'
+    line_notify_token = '0LnDbDYEJI5znhYIV8tF5QjUkDqYdIQhj6qLY9fCRPW'
     line_notify_api = 'https://notify-api.line.me/api/notify'
 
     headers = {
