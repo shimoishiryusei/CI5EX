@@ -15,15 +15,15 @@ def send_line_notify():
     soup = BeautifulSoup(res.content, 'html.parser')      #取得した情報をhtmlで解析する
 
     # 以下各種情報を取得
-    ddd = soup.find(class_="left-style")                  
+    ddd = soup.find(class_="left-style").text                 
 
-    telop = soup.find("p", class_="weather-telop").string
+    telop = soup.find("p", class_="weather-telop").text
 
-    highlists = soup.find("dd",class_="high-temp temp")
+    highlists = soup.find("dd",class_="high-temp temp").text
 
-    lowlists = soup.find("dd",class_="low-temp temp")
+    lowlists = soup.find("dd",class_="low-temp temp").text
 
-    ttt = soup.find(class_="rain-probability")
+    ttt = soup.find(class_="rain-probability").text
 
     row=[]
     for t in ttt:
