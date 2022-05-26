@@ -10,7 +10,7 @@ def send_line_notify():
     line_notify_api = 'https://notify-api.line.me/api/notify'
 
     headers = {
-        'Authorization': "Bearer" +  line_notify_token
+        'Authorization': 'Bearer ' + line_notify_token
         }
 
     data = {
