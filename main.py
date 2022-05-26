@@ -33,6 +33,8 @@ while True:
             count_Button += 1
             Notify.send_line_notify()
             print("send")
+            print("finish the program")
+            break
 
 
  
