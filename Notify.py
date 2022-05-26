@@ -30,7 +30,7 @@ def send_line_notify():
         row.append(t)
 
     # message変数に通知したい文を代入する　改行したい場合は "\n" とダブルクォテーションで囲う
-    message="\n" + ddd.text + "\n" + telop + "\n" + "最高　" + highlists.text + "\n" + "最低　" + lowlists.text + "\n"+ "---------" + "\n" +row[1].text +"\n" + "~6  : " + row[3].text + "\n" + "~12 : " + row[5].text +"\n" + "~18 : " + row[7].text +"\n" + "~24 : " + row[9].text
+    message="\n" + ddd + "\n" + telop + "\n" + "最高　" + highlists + "\n" + "最低　" + lowlists + "\n"+ "---------" + "\n" +row[1] +"\n" + "~6  : " + row[3] + "\n" + "~12 : " + row[5] +"\n" + "~18 : " + row[7] +"\n" + "~24 : " + row[9]
 
     payload = {'message': message}
     r = requests.post(url, headers=headers, params=payload,)
