@@ -33,5 +33,3 @@ def send_line_notify():
 
     payload = {'message': message}
     requests.post(url, headers=headers, params=payload,)
-
-send_line_notify()
