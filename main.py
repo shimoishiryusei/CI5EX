@@ -42,6 +42,8 @@ while True:
             if LINE_flag == 0:
                 Notify.send_line_notify(1)
                 LINE_flag = 1
+                light_flag = 0
+
         else:
             if alarm_flag == 0:
                 check += alarm.main_alarm(buzzer, B, count_Button)
@@ -50,7 +52,6 @@ while True:
         check = 0
         LINE_flag = 0
         alarm_flag = 0
-        light_flag = 0
     
 
 
