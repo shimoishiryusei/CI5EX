@@ -5,8 +5,8 @@ def get_light():
     grovepi.pinMode(light_sensor,"IMPUT")
     try:
 
-        senesor_value = grovepi.analogREAD(light_sensor)
+        senesor_value = grovepi.analogRead(light_sensor)
         return senesor_value
-        
+
     except IOError:
         print("Error")
