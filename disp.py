@@ -11,8 +11,5 @@ def set_disp(times, THs):
     Hmd = THs[1]
     Time_strings = str(Month)+"/"+str(Day)+" "+str(Hour)+":"+str(Minute)+":"+str(Second) + "\n" + "T:" + str(Tmp) + " " + "H:" + str(Hmd)
     setText(Time_strings)
-    if Deg < 500:
-        setRGB(248,248,255)
-    else:
-        setRGB(199,21,133)
+    setRGB(255,255-(Deg*0.225),255)
     time.sleep(0.5)
