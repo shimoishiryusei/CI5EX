@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def send_line_notify():
+def send_line_notify(mode): #mode1: wake up mode2: sleep
     #LINE notifyの設定を行う
     url = "https://notify-api.line.me/api/notify"
     access_token = '0LnDbDYEJI5znhYIV8tF5QjUkDqYdIQhj6qLY9fCRPW'
@@ -29,7 +29,10 @@ def send_line_notify():
         row.append(t)
 
     # message変数に通知したい文を代入する　改行したい場合は "\n" とダブルクォテーションで囲う
-    message="\n" + ddd + "\n" + telop + "\n" + "最高　" + highlists + "\n" + "最低　" + lowlists + "\n"+ "---------" + "\n" +row[1].text +"\n" + "~6  : " + row[3].text + "\n" + "~12 : " + row[5].text +"\n" + "~18 : " + row[7].text +"\n" + "~24 : " + row[9].text + "\n" + "おはようございます！" + "\n" + "今日も元気に頑張りましょう！"
-
+    if mode == 1:
+        message="\n" + ddd + "\n" + telop + "\n" + "最高　" + highlists + "\n" + "最低　" + lowlists + "\n"+ "---------" + "\n" +row[1].text +"\n" + "~6  : " + row[3].text + "\n" + "~12 : " + row[5].text +"\n" + "~18 : " + row[7].text +"\n" + "~24 : " + row[9].text + "\n" + "おはようございます！" + "\n" + "今日も元気に頑張りましょう！"
+    elif mode == 2:
+        message = "Good night"
+    
     payload = {'message': message}
     requests.post(url, headers=headers, params=payload,)
