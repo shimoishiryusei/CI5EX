@@ -43,6 +43,7 @@ while True:
         check = 0
         LINE_flag = 0
         alarm_flag = 0
+    
 
 
 
